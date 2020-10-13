@@ -41,11 +41,11 @@ cur.execute(sql_statement)
 cols = cur.fetchall()
 #print(cols)
 df=pd.DataFrame(cols)
-df.columns=["Service_type", "Latitude", "Longitude"]
+df.columns=["Category", "Latitude", "Longitude"]
 
 
-fig = px.scatter_mapbox(df, lat="Latitude", lon="Longitude", hover_name="Service_type",
-hover_data=[ "Service_type"],color_discrete_sequence=["blue"], zoom=5, height=600)
+fig = px.scatter_mapbox(df, lat="Latitude", lon="Longitude", hover_name="Category",
+hover_data=[ "Category"],color_discrete_sequence=["blue"], zoom=5, height=600)
 fig.update_layout(mapbox_style="open-street-map")
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
