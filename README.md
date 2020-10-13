@@ -52,7 +52,8 @@ python app/app.py
 ```
 and browse to 
 ```
-http://127.0.0.1:8050/
+http://127.0.0.1:80/
 or
-http://ec2-13-58-63-79.us-east-2.compute.amazonaws.com:8050/
+http://ec2-13-58-63-79.us-east-2.compute.amazonaws.com
+Default port:80
 ```
