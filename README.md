@@ -1,6 +1,6 @@
 # iReports
 
-This is a project I built while working as Insight Data Engineering Fellow. The project creates a multi-city 311 database.
+This is a project I built while working as Insight Data Engineering Fellow. The project creates a multi-city 311 database and builds an end-to-end data pipeline starting from s3 to ending at Dash front-end.
 
 
 ## Motivation
