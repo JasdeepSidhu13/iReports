@@ -1,5 +1,4 @@
 # iReports
-This Readme is a work in progress.
 
 This is a project I built while working as Insight Data Engineering Fellow. The project creates a multi-city 311 database.
 
@@ -20,6 +19,26 @@ For this project I used S3 for storing collected data, Apache Spark for processi
 
 ![alt text](docs/tech_stack.png "hover text")
 
+## Data-Processing 
+
+The cleaning and processing is performed in Apache Spark. First of all, data is imported from s3 bucket to Spark dataframes.It is then cleaned by removing all null values. A fixed normalized schema is choosen, that is used to extract the relevant columns from each data set. Values such as Month and Year are extracted from timestamp, and after further processing which involves renaming columns, the data is stacked together row-wise. The data is then written to Postgres table from which it can be easily queried upon:
+
+![alt text](docs/db_queries.png "hover text")
+
+
+## Data Visualization
+
+The data from PostgreSQL is imported to a front-end Dash application by using a python driver for postgres, "Psycopg2". After establishing the connection, the relevant quantities are exported which are to be plotted in the Dash application. For Visualization, I focus on San Francisco city, and use the latitude and longitude information to plot the map of Service requests:
+
+![alt text](docs/map1.png "hover text")
+
+Furthermore, I perform some simple aggregation for visualizing the top 5 requests
+
+![alt text](docs/sf_5.png "hover text")
+
+I then futher compare the service requests from different location by visualizing top service requests from three different cities:
+
+![alt text](docs/compare_3.png "hover text")
 
 
 
