@@ -10,7 +10,9 @@ The 311 is a service which allows citizens to inform government of non-emergency
 
 ## Datasets
 
-I have collected data from ten cities - The data is obtained from the official Open data web pages of the cities. The combined data is about 20 GB in size and has over 30 million rows. 
+I have collected data from ten cities - The data is obtained from the official Open data web pages of the cities. The combined data is about 20 GB in size and has over 30 million rows.
+
+![alt text](docs/cities.png "hover text")
 
 
 ## Architecture 
