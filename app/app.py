@@ -68,6 +68,6 @@ app.layout = html.Div(children=[
 
 # Run app
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8050, host="ec2-13-58-63-79.us-east-2.compute.amazonaws.com")
+    app.run_server(debug=True, port=80, host="ec2-13-58-63-79.us-east-2.compute.amazonaws.com")
 
 
